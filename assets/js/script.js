@@ -11,21 +11,20 @@ const target = document.getElementById("target")
 const button = document.getElementById("button")
 let timerNum = 90
 $("button").click( function () {
+    clearInterval(timerFunction);
+    clearInterval(targetInterval);
     start()
     interval()
     timer()
     timerNum = 90
-    
-}
-    
-)
+})
+
 function start (){
-    let randomNumber = Math.floor(Math.random() * (80 +10));
-    let randomNumber2 = Math.floor(Math.random() * (80+10));
+    let randomNumber = Math.floor(Math.random() * 80) +10;
+    let randomNumber2 = Math.floor(Math.random() * 80) +10;
     $("#target").css("top", randomNumber + '%')
     $("#target").css("left", randomNumber2 + '%')
     $("#target").show()
-   
 }
 
 let score = 0
@@ -53,18 +52,29 @@ function interval() {
 }
 
 
-
+let timerFunction
 function timer() {
-    let timerFunction = setInterval(function () {
+    timerFunction = setInterval(function () {
         timerNum--
+        cross()
         $("#timer").html("Timer : " + timerNum)
         if (timerNum == 0) {
             console.log('fini')
-            
             clearInterval(timerFunction);
             clearInterval(targetInterval);
             $("#target").hide()
         }
     },1000)
 }
+
+function cross() {
+    if (timerNum == 80) {
+        console.log('oui')
+        $("#crossScreen").css("right", "0")
+    }
+    
+}
+
+
+
 

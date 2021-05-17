@@ -31,3 +31,15 @@ body {
     position: absolute;
     left: 50%;
 }
+
+.crossScreen {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 100%;
+    background-color: blue;
+    animation: 2s;
+}
+
+
+
