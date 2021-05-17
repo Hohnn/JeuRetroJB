@@ -9,6 +9,7 @@ body {
     background: #68db1c;
     position: relative;
     margin: 0;
+    overflow: hidden;
 }
 
 .containerGame {
@@ -31,15 +32,51 @@ body {
     position: absolute;
     left: 50%;
 }
-
-.crossScreen {
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    right: 100%;
-    background-color: blue;
-    transition: 2s;
+.crossScreen{
+    left: -100px;
+ height: 100px;
+ width: 100px;
+ background-color: blue;
+ position: absolute;
 }
+
+.crossScreenRight{
+right: -100px;
+ height: 100px;
+ width: 100px;
+ background-color: blue;
+ position: absolute;
+}
+
+
+.IG_bonustarget  {
+    animation: slide_to_the_left 3s ease-in-out;
+  }
+  @keyframes slide_to_the_left {
+    from {
+      left: -100px;
+      /* top: 20vh; */
+    }
+    to {
+      left: 100vw;
+      /* top: 20vh; */
+    }
+  }
+
+
+  .IG_bonustargetRight  {
+    animation: slide_to_the_right 3s ease-in-out;
+  }
+  @keyframes slide_to_the_right {
+    from {
+      right: -100px;
+      /* top: 20vh; */
+    }
+    to {
+      right: 100vw;
+      /* top: 20vh; */
+    }
+  }
 
 
 
