@@ -38,7 +38,7 @@ body {
     width: 50px;
     right: 100%;
     background-color: blue;
-    animation: 2s;
+    transition: 2s;
 }
 
 

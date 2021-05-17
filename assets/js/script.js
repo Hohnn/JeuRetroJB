@@ -67,14 +67,6 @@ function timer() {
     },1000)
 }
 
-function cross() {
-    if (timerNum == 80) {
-        console.log('oui')
-        $("#crossScreen").css("right", "0")
-    }
-    
-}
-
 
 
 
